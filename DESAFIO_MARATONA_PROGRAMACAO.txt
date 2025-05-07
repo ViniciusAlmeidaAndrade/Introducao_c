@@ -1,0 +1,193 @@
+// --------------------------- PRIMEIRO DESAFIO ----------------------------
+// Desafio 1: Verificar se um número é positivo, negativo ou zero
+
+#include <stdio.h>
+
+int main() {
+  int numero;
+
+  printf("Digite um número: ");
+  scanf("%d", &numero);
+
+  if (numero > 0) {
+    printf("O número é positivo.\n");
+  } else if (numero == 0) {
+    printf("O número é negativo.\n");
+  } else {
+    printf("O número é zero.\n");
+  }
+
+  return 0;
+}
+
+// Correção esperada:
+//  Trocar as mensagens de negativo e zero nos else if e else.
+
+// --------------------------- SEGUNDO DESAFIO ----------------------------
+// Desafio 2: Verificar se um ano é bissexto
+
+#include <stdio.h>
+
+int main() {
+  int ano;
+
+  printf("Digite um ano: ");
+  scanf("%d", &ano);
+
+  if (ano % 4 == 0) {
+    printf("%d é um ano bissexto.\n", ano);
+  } else {
+    printf("%d não é um ano bissexto.\n", ano);
+  }
+
+  return 0;
+}
+
+// Correção esperada:
+// Adicionar a verificação completa: (ano % 4 == 0 && ano % 100 != 0) || (ano %
+// 400 == 0).
+
+// --------------------------- TERCEIRO DESAFIO ----------------------------
+// Desafio 3: Verificar se um triângulo é válido
+
+#include <stdio.h>
+
+int main() {
+  int lado1, lado2, lado3;
+
+  printf("Digite os três lados do triângulo: ");
+  scanf("%d %d %d", &lado1, &lado2, &lado3);
+
+  if (lado1 + lado2 > lado3) {
+    printf("Os lados formam um triângulo válido.\n");
+  } else {
+    printf("Os lados não formam um triângulo válido.\n");
+  }
+
+  return 0;
+}
+
+// Correção esperada:
+// Adicionar as verificações: lado1 + lado3 > lado2 e lado2 + lado3 > lado1.
+
+// --------------------------- QUARTO DESAFIO ----------------------------
+// Desafio 4: Verificar se um número é par ou ímpar
+
+#include <stdio.h>
+
+int main() {
+  int numero;
+
+  printf("Digite um número: ");
+  scanf("%d", &numero);
+
+  if (numero % 2 != 0) {
+    printf("O número é par.\n");
+  } else {
+    printf("O número é ímpar.\n");
+  }
+
+  return 0;
+}
+
+// Correção esperada:
+// Adicionar as vogais maiúsculas na condição: caractere == 'A' || caractere ==
+// 'E' || ....
+
+// --------------------------- QUINTO DESAFIO ----------------------------
+// Desafio 6: Verificar se um número é divisível por 3 e 5
+
+#include <stdio.h>
+
+int main() {
+  int numero;
+
+  printf("Digite um número: ");
+  scanf("%d", &numero);
+
+  if (numero % 3 == 0 || numero % 5 == 0) {
+    printf("O número é divisível por 3 e 5.\n");
+  } else {
+    printf("O número não é divisível por 3 e 5.\n");
+  }
+
+  return 0;
+}
+
+// Correção esperada:
+// Trocar o operador || por &&.
+
+// --------------------------- SEXTO DESAFIO ----------------------------
+// Desafio 7: Verificar se um número está dentro de um intervalo
+#include <stdio.h>
+
+int main() {
+  int numero;
+
+  printf("Digite um número: ");
+  scanf("%d", &numero);
+
+  if (numero < 10 || numero > 20) {
+    printf("O número está dentro do intervalo.\n");
+  } else {
+    printf("O número está fora do intervalo.\n");
+  }
+
+  return 0;
+}
+// Correção esperada:
+// Corrigir a condição para numero >= 10 && numero <= 20.
+
+// --------------------------- SETIMO DESAFIO ----------------------------
+// Desafio 8: Verificar se um número é primo
+#include <stdio.h>
+
+int main() {
+  int numero, i, ehPrimo = 1;
+
+  printf("Digite um número: ");
+  scanf("%d", &numero);
+
+  for (i = 2; i <= numero / 2; i++) {
+    if (numero % i == 0) {
+      ehPrimo = 0;
+      break;
+    }
+  }
+
+  if (ehPrimo) {
+    printf("O número é primo.\n");
+  } else {
+    printf("O número não é primo.\n");
+  }
+
+  return 0;
+}
+// Correção esperada:
+// Adicionar a verificação numero > 1 no if.
+
+// --------------------------- OITAVO DESAFIO ----------------------------
+// Desafio 9: Verificar se um número é um quadrado perfeito
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+  int numero;
+  double raiz;
+
+  printf("Digite um número: ");
+  scanf("%d", &numero);
+
+  raiz = sqrt(numero);
+
+  if (raiz == (int)raiz) {
+    printf("O número é um quadrado perfeito.\n");
+  } else {
+    printf("O número não é um quadrado perfeito.\n");
+  }
+
+  return 0;
+}
+
+// Correção esperada:
+// Adicionar a verificação numero >= 0 antes de calcular a raiz.
